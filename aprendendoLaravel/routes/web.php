@@ -12,5 +12,16 @@ Route::get('/', function () {
 });
 
 Route::get('/segundo', function (){
-    return view('segundo');
+    
+    $busca = request('search');
+
+    return view('segundo', ['busca' => $busca]);
 });
+
+Route::get('/segundo/{id?}', function($id = null){
+    return view('segundoId', ['id' => $id]);
+});
+
+// Route::get('/segundo/{id}', function($id){
+//     return view('segundoId', ['id' => $id]);
+// });
