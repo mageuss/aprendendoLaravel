@@ -1,34 +1,43 @@
 @extends('layouts.main')
 
-@section('title', 'aprendendoLavarel')
-    
+@section('title', 'HDC Events')
+
 @section('content')
-    
 
-<h1> Hello World </h1>
-<a href="/segundo">segunda pagina</a>
+<h1>Algum título</h1>
+<img src="/img/banner.jpg" alt="Banner">
+{{-- @if(10 > 15)
+    <p>A condição é true</p>
+@endif --}}
 
-@if ($nome == 'Mateus')
-    <p>o {{ $nome }} tem {{ $idade }} anos</p>
+<p>{{ $nome }}</p>
+
+{{-- @if($nome == "Pedro")
+<p>O nome é Pedro</p>
+@elseif($nome == "Matheus")
+<p>O nome é {{ $nome }} e ele tem {{ $idade2 }} anos, e trabalha como {{ $profissao }}</p>
 @else
-    <p>oii</p>
-@endif
+<p>O nome não é Pedro</p>
+@endif --}}
 
-{{-- @for ($i = 0; $i < count($array); $i++)
-    @if ($array[$i] % 2 == 0)
-        <p> O numero {{ $array[$i] }} é par </p>
+{{-- @for($i = 0; $i < count($arr); $i++)
+    <p>{{ $arr[$i] }} - {{ $i }}</p>
+    @if($i == 2)
+    <p>O i é 2</p>
     @endif
-    <p>{{ $array[$i] }}</p>
 @endfor --}}
 
-{{-- tem como criar blocos de php no blade --}}
-{{-- @php
-    $nomes = ['lucas', 'mateus', 'joão', 'luis'];
-@endphp
-@foreach ($nomes as $item)
-    {{ $item }},
+{{-- @foreach($nomes as $nome)
+    <p>{{ $loop->index }}</p>
+    <p>{{ $nome }}</p>
 @endforeach --}}
-<!--comentario em html aparece no inspecionar elemento, os outros não-->
-{{-- assim q faz comentário no blade --}}
-{{-- @endsection --}}
+
+@php
+    $name = "João";
+    echo $name;
+@endphp
+
+<!-- Comentário do HTML -->
+{{-- Este é o comentário do Blade --}}
+
 @endsection
