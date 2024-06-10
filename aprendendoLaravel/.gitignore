@@ -17,3 +17,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+
+# exclude everything
+/public/img/events/*
+
+# exception to the rule
+!/public/img/events/.gitkeep 
